@@ -503,7 +503,7 @@ func (z *SortedSet) Length() int64 {
 }
 
 // Set is used to add or update an element
-func (z *SortedSet) Set(score float64, key int64, dat interface{}) {
+func (z *SortedSet) Set(score float64, key int64) {
 	v, ok := z.dict[key]
 	z.dict[key] = &obj{key: key, score: score}
 	if ok {
